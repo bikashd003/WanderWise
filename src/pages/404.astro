@@ -1,0 +1,81 @@
+---
+// src/pages/404.astro
+import { Plane, ArrowLeft } from 'lucide-react';
+
+const title = "Lost in Paradise";
+const description = "Oops! The page you're looking for doesn't exist. You might have taken a wrong turn.";
+const homeLink = "/";
+---
+
+<html lang="en">
+  <head>
+    <title>404 – {{ title }}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(to bottom right, #dff6ff, #c5f0d5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: #1e1e2f;
+      }
+
+      .container {
+        text-align: center;
+        padding: 2rem;
+        max-width: 600px;
+      }
+
+      .icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        color: #0fa3b1;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        background-color: #0fa3b1;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background 0.3s;
+      }
+
+      a:hover {
+        background-color: #0c7a8c;
+      }
+
+      a svg {
+        margin-right: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="icon"><Plane size={48} /></div>
+      <h1>404 – {title}</h1>
+      <p>{description}</p>
+      <a href={homeLink}>
+        <ArrowLeft size={18} />
+        Back to Home
+      </a>
+    </div>
+  </body>
+</html>

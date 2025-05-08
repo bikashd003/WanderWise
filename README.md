@@ -1,26 +1,38 @@
-# Astro Starter Kit: Basics
+# WanderWise - Interactive Travel Discovery Landing Page
 
-```sh
-npm create astro@latest -- --template basics
-```
+WanderWise is a visually rich landing page that helps users discover offbeat travel destinations using interactive filters, curated experiences, and visual storytelling. Built with Astro, Alpine.js, and Tailwind CSS.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## ✨ Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **Hero Section**: Full-screen background video with engaging headline
+- **Interactive Destination Finder**: Filter destinations by category using Alpine.js
+- **Featured Destinations**: Beautiful cards with hover animations
+- **Curated Experiences Timeline**: Vertical scroll section showcasing unique travel itineraries
+- **Newsletter Signup**: Simple form integration with Formspree
+- **Responsive Design**: Beautiful on all devices
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🚀 Tech Stack
 
-## 🚀 Project Structure
+- [Astro](https://astro.build) - Static Site Generator
+- [Alpine.js](https://alpinejs.dev) - Lightweight JavaScript Framework
+- [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS Framework
+- [Formspree](https://formspree.io) - Form Backend
 
-Inside of your Astro project, you'll see the following folders and files:
+## 📁 Project Structure
 
 ```text
 /
 ├── public/
-│   └── favicon.svg
+│   ├── images/
+│   │   └── destinations/   # Destination images
+│   └── videos/            # Hero background video
 ├── src/
+│   ├── components/
+│   │   ├── Hero.astro
+│   │   ├── DestinationFinder.astro
+│   │   ├── ExperiencesTimeline.astro
+│   │   ├── Newsletter.astro
+│   │   └── Footer.astro
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
@@ -28,21 +40,32 @@ Inside of your Astro project, you'll see the following folders and files:
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🛠️ Setup & Development
 
-## 🧞 Commands
+1. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-All commands are run from the root of the project, from a terminal:
+2. **Add Required Assets**
+   - Add destination images to `/public/images/destinations/`
+   - Add hero video to `/public/videos/`
+   - Update Formspree endpoint in Newsletter.astro
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+3. **Start Development Server**
+   ```bash
+   npm run dev
+   ```
+   Visit `http://localhost:4321`
 
-## 👀 Want to learn more?
+4. **Build for Production**
+   ```bash
+   npm run build
+   ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📝 Notes
+
+- Replace placeholder images and video with properly licensed media
+- Update Formspree endpoint with your form ID
+- Customize colors in `tailwind.config.mjs`
+- Add your own destinations and experiences content
