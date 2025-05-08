@@ -8,15 +8,11 @@ WanderWise is a visually rich landing page that helps users discover offbeat tra
 - **Interactive Destination Finder**: Filter destinations by category using Alpine.js
 - **Featured Destinations**: Beautiful cards with hover animations
 - **Curated Experiences Timeline**: Vertical scroll section showcasing unique travel itineraries
-- **Newsletter Signup**: Simple form integration with Formspree
 - **Responsive Design**: Beautiful on all devices
 
 ## 🚀 Tech Stack
 
 - [Astro](https://astro.build) - Static Site Generator
-- [Alpine.js](https://alpinejs.dev) - Lightweight JavaScript Framework
-- [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS Framework
-- [Formspree](https://formspree.io) - Form Backend
 
 ## 📁 Project Structure
 
@@ -28,15 +24,20 @@ WanderWise is a visually rich landing page that helps users discover offbeat tra
 │   └── videos/            # Hero background video
 ├── src/
 │   ├── components/
+│   │   ├── AnimatedHero.tsx
 │   │   ├── Hero.astro
+│   │   ├── DestinationsSection.tsx
 │   │   ├── DestinationFinder.astro
+│   │   ├── ExperiencesTimelineSection.tsx
 │   │   ├── ExperiencesTimeline.astro
+│   │   ├── NewsLetterSection.tsx
 │   │   ├── Newsletter.astro
 │   │   └── Footer.astro
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
 │       └── index.astro
+│       └── 404.astro
 └── package.json
 ```
 
@@ -50,7 +51,6 @@ WanderWise is a visually rich landing page that helps users discover offbeat tra
 2. **Add Required Assets**
    - Add destination images to `/public/images/destinations/`
    - Add hero video to `/public/videos/`
-   - Update Formspree endpoint in Newsletter.astro
 
 3. **Start Development Server**
    ```bash
@@ -66,6 +66,5 @@ WanderWise is a visually rich landing page that helps users discover offbeat tra
 ## 📝 Notes
 
 - Replace placeholder images and video with properly licensed media
-- Update Formspree endpoint with your form ID
 - Customize colors in `tailwind.config.mjs`
 - Add your own destinations and experiences content
