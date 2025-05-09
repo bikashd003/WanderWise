@@ -55,7 +55,8 @@ export default function AnimatedHero() {
   const backgroundY = mousePosition.y / -100;
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16">
+      {/* Added padding-top for the floating navbar */}
       {/* Modernized background with subtle parallax effect and mesh gradient */}
       <div className="absolute inset-0">
         <motion.div

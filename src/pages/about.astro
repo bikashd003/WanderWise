@@ -1,0 +1,310 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FloatingNavbar from '../components/FloatingNavbar.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="About Us | WanderWise">
+  <FloatingNavbar />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-b from-indigo-50 to-white relative overflow-hidden">
+      <div class="absolute -right-20 top-40 w-80 h-80 rounded-full bg-blue-100/30 blur-3xl"></div>
+      <div class="absolute -left-20 bottom-40 w-60 h-60 rounded-full bg-indigo-100/30 blur-3xl"></div>
+      
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <span class="inline-block py-1 px-3 rounded-full text-xs font-medium uppercase tracking-wider text-indigo-600 bg-indigo-50 mb-4">
+            Our Story
+          </span>
+          
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 to-blue-600">
+            About WanderWise
+          </h1>
+          
+          <p class="text-lg md:text-xl text-gray-600 mb-8">
+            We're on a mission to help travelers discover extraordinary destinations and create unforgettable memories.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Our Story Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="about-image">
+              <div class="rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src="https://via.placeholder.com/600x800?text=Our+Story" 
+                  alt="WanderWise Team" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            
+            <div class="about-content">
+              <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Journey</h2>
+              
+              <div class="space-y-4 text-gray-700">
+                <p>
+                  WanderWise was born from a passion for authentic travel experiences and a desire to help others discover the extraordinary in every journey.
+                </p>
+                
+                <p>
+                  Founded in 2020 by a group of avid travelers and digital nomads, we set out to create a platform that goes beyond typical tourist attractions and offers genuine connections with destinations and cultures.
+                </p>
+                
+                <p>
+                  Our team has collectively visited over 75 countries, seeking out hidden gems, connecting with locals, and curating experiences that transform ordinary trips into extraordinary memories.
+                </p>
+                
+                <p>
+                  Today, WanderWise helps thousands of travelers each month discover meaningful experiences and plan journeys that align with their unique interests and values.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Our Values -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Values</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            The principles that guide everything we do
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- Value 1 -->
+          <div class="value-card bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
+            <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Authentic Experiences</h3>
+            <p class="text-gray-600">
+              We believe in travel that connects you with the heart and soul of a destination, not just its tourist attractions.
+            </p>
+          </div>
+          
+          <!-- Value 2 -->
+          <div class="value-card bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
+            <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Responsible Tourism</h3>
+            <p class="text-gray-600">
+              We promote sustainable travel practices that respect local communities, preserve cultures, and protect the environment.
+            </p>
+          </div>
+          
+          <!-- Value 3 -->
+          <div class="value-card bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
+            <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Community Connection</h3>
+            <p class="text-gray-600">
+              We believe that meaningful interactions with locals create the most memorable and transformative travel experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Team Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Passionate travelers and experts dedicated to creating extraordinary experiences
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <!-- Team Member 1 -->
+          <div class="team-member text-center">
+            <div class="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-6">
+              <img 
+                src="https://via.placeholder.com/300x300?text=CEO" 
+                alt="Sarah Johnson" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-1">Sarah Johnson</h3>
+            <p class="text-indigo-600 mb-3">Founder & CEO</p>
+            <p class="text-gray-600 text-sm">Former travel journalist with a passion for sustainable tourism and cultural preservation.</p>
+          </div>
+          
+          <!-- Team Member 2 -->
+          <div class="team-member text-center">
+            <div class="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-6">
+              <img 
+                src="https://via.placeholder.com/300x300?text=CTO" 
+                alt="Michael Chen" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-1">Michael Chen</h3>
+            <p class="text-indigo-600 mb-3">CTO</p>
+            <p class="text-gray-600 text-sm">Tech innovator and digital nomad who's visited over 40 countries while working remotely.</p>
+          </div>
+          
+          <!-- Team Member 3 -->
+          <div class="team-member text-center">
+            <div class="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-6">
+              <img 
+                src="https://via.placeholder.com/300x300?text=COO" 
+                alt="Elena Rodriguez" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-1">Elena Rodriguez</h3>
+            <p class="text-indigo-600 mb-3">Chief Experience Officer</p>
+            <p class="text-gray-600 text-sm">Former tour guide with expertise in creating immersive cultural experiences.</p>
+          </div>
+          
+          <!-- Team Member 4 -->
+          <div class="team-member text-center">
+            <div class="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-6">
+              <img 
+                src="https://via.placeholder.com/300x300?text=CMO" 
+                alt="James Wilson" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-1">James Wilson</h3>
+            <p class="text-indigo-600 mb-3">Head of Content</p>
+            <p class="text-gray-600 text-sm">Travel photographer and storyteller who specializes in capturing authentic moments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="py-16">
+      <Testimonials />
+    </section>
+    
+    <!-- Join Our Team CTA -->
+    <section class="py-16 bg-gradient-to-r from-indigo-600 to-blue-500 text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-[url('https://via.placeholder.com/1920x1080?text=Team+Background')] opacity-10 bg-cover bg-center"></div>
+      
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Join Our Team</h2>
+          <p class="text-lg mb-8 text-white/90">
+            We're always looking for passionate travelers and industry experts to help us create extraordinary experiences.
+          </p>
+          
+          <a href="#" class="inline-block px-8 py-4 rounded-lg bg-white text-indigo-600 font-bold hover:bg-opacity-90 transition-all duration-300 shadow-lg transform hover:-translate-y-1">
+            View Open Positions
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<script>
+  // Add scroll reveal animations
+  document.addEventListener('DOMContentLoaded', () => {
+    // Animate sections on scroll
+    const sections = document.querySelectorAll('section');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    sections.forEach(section => {
+      section.classList.add('opacity-0');
+      observer.observe(section);
+    });
+    
+    // Staggered animation for value cards
+    const values = document.querySelectorAll('.value-card');
+    values.forEach((value, index) => {
+      const el = value as HTMLElement;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      
+      setTimeout(() => {
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }, 150 * index);
+    });
+    
+    // Staggered animation for team members
+    const teamMembers = document.querySelectorAll('.team-member');
+    teamMembers.forEach((member, index) => {
+      const el = member as HTMLElement;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      
+      setTimeout(() => {
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }, 150 * index);
+    });
+    
+    // Animate about content and image
+    const aboutImage = document.querySelector('.about-image') as HTMLElement;
+    const aboutContent = document.querySelector('.about-content') as HTMLElement;
+    
+    if (aboutImage && aboutContent) {
+      aboutImage.style.opacity = '0';
+      aboutImage.style.transform = 'translateX(-20px)';
+      aboutContent.style.opacity = '0';
+      aboutContent.style.transform = 'translateX(20px)';
+      
+      setTimeout(() => {
+        aboutImage.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        aboutContent.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        aboutImage.style.opacity = '1';
+        aboutImage.style.transform = 'translateX(0)';
+        aboutContent.style.opacity = '1';
+        aboutContent.style.transform = 'translateX(0)';
+      }, 300);
+    }
+  });
+</script>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

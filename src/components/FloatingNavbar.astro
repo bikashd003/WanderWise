@@ -1,0 +1,94 @@
+---
+---
+
+<div class="fixed top-0 left-0 w-full z-50 flex justify-center pt-6 px-4">
+  <nav class="bg-white/90 backdrop-blur-md rounded-full shadow-lg py-3 px-6 max-w-3xl w-full flex items-center justify-between transition-all duration-300" id="floating-navbar">
+    <!-- Logo -->
+    <a href="/" class="flex items-center space-x-2">
+      <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 to-blue-600">WanderWise</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex items-center space-x-6">
+      <a href="/" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Home</a>
+      <a href="/destinations" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Destinations</a>
+      <a href="/experiences" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Experiences</a>
+      <a href="/travel-tips" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Travel Tips</a>
+      <a href="/about" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">About</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </nav>
+</div>
+
+<!-- Mobile Menu Overlay -->
+<div class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300" id="mobile-menu-overlay"></div>
+
+<!-- Mobile Menu -->
+<div class="fixed right-0 top-0 h-full w-64 bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-menu">
+  <div class="p-6">
+    <div class="flex justify-between items-center mb-8">
+      <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-700 to-blue-600">WanderWise</span>
+      <button id="close-mobile-menu" class="text-gray-500 hover:text-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div class="flex flex-col space-y-4">
+      <a href="/" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors py-2 border-b border-gray-100">Home</a>
+      <a href="/destinations" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors py-2 border-b border-gray-100">Destinations</a>
+      <a href="/experiences" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors py-2 border-b border-gray-100">Experiences</a>
+      <a href="/travel-tips" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors py-2 border-b border-gray-100">Travel Tips</a>
+      <a href="/about" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors py-2 border-b border-gray-100">About</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Get elements
+  const navbar = document.getElementById('floating-navbar');
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+  const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+  // Handle scroll for navbar transparency and size
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      navbar?.classList.add('py-2', 'px-4');
+      navbar?.classList.remove('py-3', 'px-6');
+    } else {
+      navbar?.classList.add('py-3', 'px-6');
+      navbar?.classList.remove('py-2', 'px-4');
+    }
+  });
+
+  // Mobile menu toggle
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.remove('translate-x-full');
+    mobileMenuOverlay?.classList.remove('opacity-0', 'pointer-events-none');
+    mobileMenuOverlay?.classList.add('opacity-100', 'pointer-events-auto');
+  });
+
+  // Close mobile menu
+  const closeMenu = () => {
+    mobileMenu?.classList.add('translate-x-full');
+    mobileMenuOverlay?.classList.remove('opacity-100', 'pointer-events-auto');
+    mobileMenuOverlay?.classList.add('opacity-0', 'pointer-events-none');
+  };
+
+  closeMobileMenu?.addEventListener('click', closeMenu);
+  mobileMenuOverlay?.addEventListener('click', closeMenu);
+
+  // Close mobile menu when clicking on links
+  const mobileLinks = mobileMenu?.querySelectorAll('a');
+  mobileLinks?.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>
